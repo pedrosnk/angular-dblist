@@ -15,10 +15,13 @@ module.directive('dubleList', function(){
             scope.$watch('destModel', function(){
                 selectElem.multiSelect('refresh');
             });
-            scope.$watch('origin', function(){
+            scope.$watch('origin', function(newValue, oldValue){
+                selectElem.find('option').remove();
+                selectElem.multiSelect('refresh');
                 scope.origin.forEach(function(option){
                     selectElem.multiSelect('addOption', {value: option[scope.originValue], text: option[scope.originText]});
                 });
+                // to trigger the refresh
                 scope.destModel = angular.copy(scope.destModel);
             });
 
