@@ -7,9 +7,13 @@
 <body>
 
     <div ng-controller='ListController'>
-        <div>{{listItems}}</div>
-        <div>{{itemIds}}</div>
-        <div><button ng-click='reset()'>reset</button><button ng-click='reset2()'>reset2</button><button ng-click='reset3()'>reset3</button></div>
+        <div>json content: {{listItems}}</div>
+        <div>ids: {{itemIds}}</div>
+        <div>
+          <button ng-click='reset()'>reset</button>
+          <button ng-click='reset2()'>reset2</button>
+          <button ng-click='changeResult()'>change key</button>
+        </div>
         <duble-list dest-model='itemIds' origin-value='itemId' origin-text='itemName' origin='listItems' />
     </div>
 

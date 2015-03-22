@@ -1,8 +1,6 @@
 (function(){
 'use strict';
-
 var module = angular.module('dblist');
-
 module.directive('dubleList', function(){
     /**
      * Loads options into the select list
@@ -30,11 +28,6 @@ module.directive('dubleList', function(){
                 scope.destModel = angular.copy(scope.destModel);
             });
 
-        },
-        controller: function($scope, $timeout){
-            $timeout(function(){
-                $('select').multiSelect('refresh');
-            });
         },
         scope: {
             'destModel': '=',
