@@ -1,13 +1,18 @@
 {
   "name": "dblist",
-  "version": "0.0.0",
+  "version": "0.1",
   "authors": [
-    "Pedro Medeiros <pedrosnk@gmail.com>"
+    "Pedro Medeiros"
   ],
   "license": "MIT",
+  "main": [
+    "js/directives/dblist_directive.js",
+    "js/modules/dblist.js"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
+    "example",
     "test",
     "tests"
   ],
