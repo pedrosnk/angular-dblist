@@ -1,6 +1,3 @@
-(function(){
-'use strict';
-
 var app = angular.module('dbApp', ['dblist']);
 
 app.controller('ListController', function($scope, $http){
@@ -32,4 +29,3 @@ app.controller('ListController', function($scope, $http){
     };
 });
 
-})();

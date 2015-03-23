@@ -27,7 +27,6 @@ module.directive('dubleList', function(){
                 // to trigger the refresh
                 scope.destModel = angular.copy(scope.destModel);
             });
-
         },
         scope: {
             'destModel': '=',
