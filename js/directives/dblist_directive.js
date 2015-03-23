@@ -8,13 +8,14 @@ module.directive('dubleList', function(){
     var loadingOptions = function(scope, element){
         var selectElem = $(element.find('select'));
         scope.origin.forEach(function(option){
-            selectElem.multiSelect('addOption', {value: option[scope.originValue], text: option[scope.originText]});
+            selectElem.multiSelect('addOption', {value: option[scope.originValue].toString(), text: option[scope.originText]});
         });
     };
 
     return {
         link: function(scope, element, attrs){
             var selectElem = $(element.find('select'));
+            scope.origin = scope.origin || [];
             selectElem.multiSelect({});
             loadingOptions(scope, element);
             scope.$watch('destModel', function(){
