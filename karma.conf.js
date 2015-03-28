@@ -13,7 +13,21 @@ module.exports = function(config){
 
         plugins: [
         	'karma-jasmine'
-        ]
+        ],
+        browsers: ['PhantomJS', 'PhantomJS_custom'],
+
+        customLaunchers: {
+          'PhantomJS_custom': {
+            base: 'PhantomJS',
+            options: {
+              windowName: 'my-window',
+              settings: {
+                webSecurityEnabled: false
+              }
+            },
+            flags: ['--remote-debugger-port=9000']
+          }
+        }
     });
 
 };
