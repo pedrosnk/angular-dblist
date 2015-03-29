@@ -8,6 +8,8 @@ module.exports = function(config){
             'bower_components/multiselect/js/jquery.multi-select.js',
             'bower_components/angular/angular.js',
             'bower_components/angular-mocks/angular-mocks.js',
+            'js/modules/dblist.js',
+            'js/directives/dblist_directive.js',
             'spec/**/*.js'
         ],
 

@@ -7,7 +7,7 @@ angular.module('dblist', []);
 (function(){
 'use strict';
 var module = angular.module('dblist');
-module.directive('dubleList', function(){
+module.directive('doubleList', function(){
     /**
      * Loads options into the select list
      */
