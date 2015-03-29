@@ -12,22 +12,11 @@ module.exports = function(config){
         autoWatch: true,
 
         plugins: [
-        	'karma-jasmine'
+        	'karma-jasmine',
+          'karma-phantomjs-launcher'
         ],
-        browsers: ['PhantomJS', 'PhantomJS_custom'],
 
-        customLaunchers: {
-          'PhantomJS_custom': {
-            base: 'PhantomJS',
-            options: {
-              windowName: 'my-window',
-              settings: {
-                webSecurityEnabled: false
-              }
-            },
-            flags: ['--remote-debugger-port=9000']
-          }
-        }
+        browsers: ['PhantomJS']
     });
 
 };
