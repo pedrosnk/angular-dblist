@@ -1,6 +1,6 @@
 {
   "name": "dblist",
-  "version": "0.1",
+  "version": "0.1.0",
   "description": "A double list select build on top of angular with two way data binding",
   "repository": "git://github.com/pedrosnk/angular-dblist.git",
   "main": "index.js",
