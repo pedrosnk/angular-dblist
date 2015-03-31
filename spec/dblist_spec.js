@@ -9,7 +9,7 @@ describe('the truth', function(){
     $rootScope = _$rootScope_;
   }));
 
-	it('displays the double-list', function(){
+  var createDbList = function(){
     $rootScope.listItems = [
       {"itemName": "item1", "itemId": "1"},
       {"itemName": "item2", "itemId": "2"},
@@ -22,6 +22,11 @@ describe('the truth', function(){
     var dbListElement = $compile(dbList)($rootScope);
     $rootScope.$digest();
 
+    return dbListElement;
+  };
+
+	it('displays the double-list', function(){
+    var dbListElement = createDbList();
     expect(dbListElement.find('.ms-selectable').length).not.toBe(0);
     expect(dbListElement.find('.ms-selection').length).not.toBe(0);
     expect(dbListElement.find('option').length).toBe(3);
